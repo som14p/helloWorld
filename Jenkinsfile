@@ -4,6 +4,7 @@ pipeline {
     stage('Initialise') {
       steps {
         echo 'This is first step for Initialize stage'
+        sh 'echo initialise'
       }
     }
     stage('Build') {
