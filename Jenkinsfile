@@ -14,12 +14,12 @@ pipeline {
     }
     stage('Test') {
       parallel {
-        stage('Test') {
+        stage('firefox') {
           steps {
             echo 'Test stp no 1'
           }
         }
-        stage('test') {
+        stage('chrome') {
           steps {
             echo 'test no 2'
           }
@@ -29,11 +29,6 @@ pipeline {
     stage('Report') {
       steps {
         echo 'This is report'
-      }
-    }
-    stage('End') {
-      steps {
-        echo 'this is the end of pipeline'
       }
     }
   }
